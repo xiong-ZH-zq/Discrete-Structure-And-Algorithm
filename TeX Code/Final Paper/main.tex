@@ -18,7 +18,7 @@
 
     % 表格
     \usepackage{longtable,booktabs,array}    % 三线表和长表格
-    % \usepackage{tabularx}
+    \usepackage{tabularx}
     % \usepackage{xltabular}    % 跨页长表格+换行，有需要请去掉注释
 
     % 图片
@@ -27,6 +27,38 @@
 
     % 链接
     \usepackage{url}    % 网页链接
+
+    % 附录
+    \usepackage{appendix}
+
+    % 代码块
+    \usepackage{listings}
+    \lstset{
+        basicstyle          =   \sffamily,          % 基本代码风格
+        keywordstyle        =   \bfseries,          % 关键字风格
+        commentstyle        =   \rmfamily\itshape,  % 注释的风格，斜体
+        stringstyle         =   \ttfamily,  % 字符串风格
+        flexiblecolumns,                % 别问为什么，加上这个
+        numbers             =   left,   % 行号的位置在左边
+        showspaces          =   false,  % 是否显示空格，显示了有点乱，所以不现实了
+        numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt等宽字体
+        showstringspaces    =   false,
+        captionpos          =   t,      % 这段代码的名字所呈现的位置，t指的是top上面
+        frame               =   lrtb,   % 显示边框
+    }
+
+    \lstdefinestyle{Python}{
+        language        =   Python, % 语言选Python
+        basicstyle      =   \zihao{-5}\ttfamily,
+        numberstyle     =   \zihao{-5}\ttfamily,
+        keywordstyle    =   \color{blue},
+        keywordstyle    =   [2] \color{teal},
+        stringstyle     =   \color{magenta},
+        commentstyle    =   \color{green!30!black!70}\ttfamily,
+        breaklines      =   true,   % 自动换行，建议不要写太长的行
+        columns         =   fixed,  % 如果不加这一句，字间距就不固定，很丑，必须加
+        basewidth       =   0.5em,
+    }
 
 
 % 文档基本信息
@@ -53,6 +85,14 @@
 
 \section{正文开始}
 正文结束。
+杨表绘图：
+
+\begin{center}
+    \(
+    \young(~:~:2:~,~:~:~:,~:\bullet:~:,~:~::,~:::)
+    \)
+\end{center}
+
 
 
 % 简单的参考文献表，也可自行使用 BibTeX
@@ -61,5 +101,24 @@
     % 以下为 参考文献 的一个示例
     \bibitem{ref1}郭莉莉,白国君,尹泽成,魏惠芳. “互联网+”背景下沈阳智慧交通系统发展对策建议[A]. 中共沈阳市委、沈阳市人民政府.第十七届沈阳科学学术年会论文集[C].中共沈阳市委、沈阳市人民政府:沈阳市科学技术协会,2020:4.
 \end{thebibliography}
+
+
+\clearpage
+\begin{appendices}
+    % 附录页
+    \section*{附录}
+    \subsection*{本文算法代码实现}
+
+    \lstinputlisting[
+        style       =   Python,
+        caption     =   {\bf demo.py},
+        label       =   {demo.py}
+    ]{./src/demo.py}
+
+
+
+\end{appendices}
+
+
 
 \end{document}
