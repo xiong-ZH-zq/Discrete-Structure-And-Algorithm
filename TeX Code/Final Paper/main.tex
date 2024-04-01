@@ -1,0 +1,65 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{article}
+
+
+% 导入宏包
+    % 版式
+    \usepackage[a4paper]{geometry}    % 设定版式为 a4
+    
+    % 中文
+    \usepackage{ctex}
+
+    % 绘图相关
+    \usepackage{tikz}    % 绘图宏包
+    \usepackage[enableskew,vcentermath]{youngtab}    % 杨表绘图，范例见 young tableau 部分
+    \Ylinethick{1.5pt}    % 杨表的线段粗细
+    \Yautoscale{0}
+    \Yboxdim{14pt}
+
+    % 表格
+    \usepackage{longtable,booktabs,array}    % 三线表和长表格
+    % \usepackage{tabularx}
+    % \usepackage{xltabular}    % 跨页长表格+换行，有需要请去掉注释
+
+    % 图片
+    \usepackage{graphicx}
+    \usepackage{float}    % 浮动体控制
+
+    % 链接
+    \usepackage{url}    % 网页链接
+
+
+% 文档基本信息
+    % 导言区
+    \title{课程论文}
+    % 注意字母序
+    \author{张三(0000000) \ 李四(1111111)}
+    \date{\today}
+
+
+
+
+\begin{document}
+
+\input{sections/table.tex}
+
+\maketitle
+
+\begin{abstract}
+    摘要内容
+
+    \textbf{关键词}： 离散结构及其算法
+\end{abstract}
+
+\section{正文开始}
+正文结束。
+
+
+% 简单的参考文献表，也可自行使用 BibTeX
+\begin{thebibliography}{99}
+
+    % 以下为 参考文献 的一个示例
+    \bibitem{ref1}郭莉莉,白国君,尹泽成,魏惠芳. “互联网+”背景下沈阳智慧交通系统发展对策建议[A]. 中共沈阳市委、沈阳市人民政府.第十七届沈阳科学学术年会论文集[C].中共沈阳市委、沈阳市人民政府:沈阳市科学技术协会,2020:4.
+\end{thebibliography}
+
+\end{document}

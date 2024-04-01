@@ -70,8 +70,8 @@ def insert_young_tableau(s:list[int]) -> YoungTableau:
     return result
 
 if __name__ == '__main__':
-    num = 3
-    arr = [3,1,4,2,6,9,10,8]
+    # num = 3
+    arr = [2,7,1,3,5,6,9,10,8,4]
     young = insert_young_tableau(arr)
 
 

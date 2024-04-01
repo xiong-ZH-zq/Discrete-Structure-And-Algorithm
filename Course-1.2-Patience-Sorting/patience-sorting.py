@@ -4,7 +4,7 @@
 # TODO 利用耐心排序给任意排列排序
 
 from collections import deque    # 更快的双向队列
-import numpy as np    # 测试用
+# import numpy as np    # 测试用
 
 def binary_search(arr:list[list],target:int) -> int:
     """利用二分查找法查找顶部元素比 target 大的最小位置
@@ -74,6 +74,6 @@ def find_longest_subsequence(arr:list[int],ascend:bool=True) -> list:
 if __name__ == '__main__':
 
     # 利用随机数测试
-    arr = np.random.choice(50,10,replace=False)
+    arr = [2,7,1,3,5,6,9,10,8,4]
     print(arr)
     print(find_longest_subsequence(list(arr),ascend=False))
